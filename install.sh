@@ -67,6 +67,8 @@ if [ "$1" = "start" ]; then
   create_link
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   chsh -s /bin/zsh
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
   dl_nvim
 else
   install_package
