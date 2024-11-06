@@ -13,6 +13,7 @@ package_Debian="
   nano
   wget
   valgrind
+  zsh
 "
 
 # Modules de dotfiles à lier
@@ -64,6 +65,8 @@ if [ "$1" = "start" ]; then
   # Mode de démarrage
   install_package
   create_link
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  chsh -s /bin/zsh
   dl_nvim
 else
   install_package
