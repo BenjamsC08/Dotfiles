@@ -136,6 +136,10 @@
   nvtopPackages.nvidia
   tree
   neofetch
+  python311
+  luarocks
+  xsel
+  xclip
   ];
 
   #environment.variables = {
