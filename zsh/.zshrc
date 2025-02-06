@@ -3,8 +3,7 @@ alias nvim="~/.dotfiles/nvim/nvim.appimage"
 alias vi="nvim"
 alias vim="nvim"
 alias v="nvim"
-alias bat="batcat"
-alias gcw="gcc -Wall -Wextra -Werror";
+alias gcw="cc -Wall -Wextra -Werror";
 alias list="~/Prog/Shell/MyScripts/list.sh"
 alias mkex="~/Prog/Shell/MyScripts/create_dir.sh"
 
@@ -28,9 +27,7 @@ export PYTHONPATH="$PATH:$HOME/Prog/myEnvs/myenv/bin"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-cs (){
-  cd "$1" && clear && ls
-}
+source .zsh_func
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
