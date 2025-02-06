@@ -1,0 +1,8 @@
+# zsh aliasses
+
+alias vi="nvim"
+alias vim="nvim"
+alias v="nvim"
+alias gcw="cc -Wall -Wextra -Werror";
+alias list="~/Prog/Shell/MyScripts/list.sh"
+alias mkex="~/Prog/Shell/MyScripts/create_dir.sh"
