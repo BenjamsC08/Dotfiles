@@ -19,9 +19,7 @@ package_Debian="
 # Modules de dotfiles à lier
 modules="
   zsh
-  p10k
   nvim
-  profile
 "
 
 DOTFILES_DIR="$HOME/.dotfiles"
@@ -51,25 +49,11 @@ create_link() {
   done
 }
 
-# Fonction pour télécharger et configurer Neovim
-dl_nvim() {
-  mkdir -p ~/.dotfiles/other/
-  cd ~/.dotfiles/other/
-  curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-  chmod u+x nvim.appimage
-  cd ~
-}
-
 # Lancement du script en fonction du paramètre
 if [ "$1" = "start" ]; then
   # Mode de démarrage
   install_package
   create_link
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  chsh -s /bin/zsh
-  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
-  dl_nvim
 else
   install_package
   create_link
