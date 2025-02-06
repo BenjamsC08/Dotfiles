@@ -113,5 +113,5 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-source .zsh_aliasses
-source .zsh_func
+source "$HOME/.zsh_aliasses" 
+source "$HOME/.zsh_func"
