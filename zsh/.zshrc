@@ -115,3 +115,4 @@ source $ZSH/oh-my-zsh.sh
 
 source "$HOME/.zsh_aliasses" 
 source "$HOME/.zsh_func"
+export EDITOR='nvim'

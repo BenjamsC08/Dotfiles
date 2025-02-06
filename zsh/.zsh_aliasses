@@ -6,3 +6,5 @@ alias v="nvim"
 alias gcw="cc -Wall -Wextra -Werror";
 alias list="~/Prog/Shell/MyScripts/list.sh"
 alias mkex="~/Prog/Shell/MyScripts/create_dir.sh"
+alias NixReb="sudo nixos-rebuild switch --flake /etc/nixos#mySystem"
+alias NixEdit="sudoedit /etc/nixos/configuration.nix"
