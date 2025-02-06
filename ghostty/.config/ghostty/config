@@ -1,10 +1,12 @@
 background=282c34
-theme = "DoomOne"
+theme = dark:OneHalfDark,light:OneHalfLight
+foreground=ffffff
 
 font-size = 14
 cursor-style = block
 adjust-cell-height = 10%
 background-opacity = 0.96
+mouse-hide-while-typing = true
 
 gtk-titlebar-hide-when-maximized = true
 
