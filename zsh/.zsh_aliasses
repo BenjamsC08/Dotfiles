@@ -3,8 +3,9 @@
 alias vi="nvim"
 alias vim="nvim"
 alias v="nvim"
-alias gcw="cc -Wall -Wextra -Werror";
+alias gcw="cc -Wall -Wextra -Werror -g3";
 alias list="~/Prog/Shell/MyScripts/list.sh"
 alias mkex="~/Prog/Shell/MyScripts/create_dir.sh"
 alias NixReb="sudo nixos-rebuild switch --flake ~/Dotfiles/Nixos#mySystem"
 alias NixEdit="sudo nvim /etc/nixos/configuration.nix"
+alias myEnv="source ~/.venv/bin/activate"

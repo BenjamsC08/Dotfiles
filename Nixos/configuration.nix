@@ -111,35 +111,9 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  neovim
-  wget
-  brave
-  keepassxc
-  terminator
-  zsh
-  ghostty
-  git
-  stow
-  gcc
-  clang
-  valgrind
-  gdb
-  gnumake
-  wget
-  curl
-  zip
-  unzip
-  nodejs_23
-  gcolor3
-  linuxKernel.packages.linux_6_6.nvidia_x11
-  pciutils
-  nvtopPackages.nvidia
-  tree
-  neofetch
-  python311
-  luarocks
-  xsel
-  xclip
+  neovim wget brave keepassxc terminator zsh ghostty git stow gcc clang valgrind gdb
+  gnumake wget curl zip unzip nodejs_23 gcolor3 linuxKernel.packages.linux_6_6.nvidia_x11
+  pciutils nvtopPackages.nvidia tree neofetch python311 python311Packages.pip luarocks xsel xclip
   ];
 
   #environment.variables = {
