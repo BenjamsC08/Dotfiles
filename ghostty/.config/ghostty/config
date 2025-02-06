@@ -6,6 +6,10 @@ cursor-style = block
 adjust-cell-height = 10%
 background-opacity = 0.96
 
+gtk-titlebar-hide-when-maximized = true
+
+window-colorspace = "display-p3"
+
 keybind = ctrl+r=reload_config
 keybind = ctrl+shift+w=close_surface
 
