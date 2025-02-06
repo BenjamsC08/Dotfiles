@@ -96,7 +96,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
-     #zsh
+     wike gnome.gnome-tweaks gnomeExtensions.appindicator gnomeExtensions.dash-to-dock gnomeExtensions.caffeine gnomeExtensions.rounded-corners #tela-cirlce-icon-theme
     ];
   };
 
@@ -135,6 +135,7 @@
   pciutils
   nvtopPackages.nvidia
   tree
+  neofetch
   ];
 
   #environment.variables = {
