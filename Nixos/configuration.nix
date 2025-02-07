@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
     ];
 
+  services.gnome.core-utilities.enable = false;
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -56,8 +57,15 @@
     open = false;
   };
 
-  hardware.opengl.extraPackages = with pkgs; [  linuxKernel.packages.linux_6_6.nvidia_x11 ];
-  boot.kernelModules = [ "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm" ];
+  hardware.opengl.extraPackages = with pkgs; [ linuxKernel.packages.linux_6_6.nvidia_x11 ];  # <- Ajout du point-virgule
+
+  virtualisation.virtualbox.host.enable = true;
+  
+  boot.kernelModules = lib.mkMerge [
+  [ "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm" "vboxdrv" "vboxnetflt" "vboxnetadp" "vboxpci" ]
+  ];
+
+
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -88,7 +96,6 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-
   programs.zsh.enable = true;
   users.users.ben = {
     isNormalUser = true;
@@ -96,9 +103,11 @@
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
-     wike gnome.gnome-tweaks gnomeExtensions.appindicator gnomeExtensions.dash-to-dock gnomeExtensions.caffeine gnomeExtensions.rounded-corners #tela-cirlce-icon-theme
+      wike gnome.gnome-tweaks gnomeExtensions.appindicator gnomeExtensions.dash-to-dock gnomeExtensions.caffeine gnomeExtensions.rounded-corners #tela-cirlce-icon-theme
     ];
   };
+
+  users.extraGroups.vboxusers.members = [ "ben" ];
 
   # Install firefox.
   programs.firefox.enable = false;
@@ -111,40 +120,11 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  neovim wget brave keepassxc terminator zsh ghostty git stow gcc clang valgrind gdb
-  gnumake wget curl zip unzip nodejs_23 gcolor3 linuxKernel.packages.linux_6_6.nvidia_x11
-  pciutils nvtopPackages.nvidia tree neofetch python311 python311Packages.pip luarocks xsel xclip
+    neovim wget brave keepassxc terminator zsh ghostty git stow gcc clang valgrind gdb
+    gnumake wget curl zip unzip nodejs_23 gcolor3 linuxKernel.packages.linux_6_6.nvidia_x11
+    pciutils nvtopPackages.nvidia tree neofetch python311 python311Packages.pip luarocks xsel xclip
   ];
 
-  #environment.variables = {
-   # EDITOR = "nvim";
-  #};
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
-
 }
+
