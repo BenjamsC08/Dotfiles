@@ -115,4 +115,7 @@ source $ZSH/oh-my-zsh.sh
 
 source "$HOME/.zsh_aliasses" 
 source "$HOME/.zsh_func"
+if [ -f "$HOME/.zsh_appimg_aliasses" ]; then
+  source "$HOME/.zsh_appimg_aliasses"
+fi
 export EDITOR='nvim'

@@ -1,0 +1,11 @@
+# app_img aliasses
+
+if [ -f "$HOME/Documents/AppImg/keepassxc.AppImage" ]; then
+  alias kxc="$HOME/Documents/AppImg/keepassxc.AppImage"
+fi
+if [ -f "$HOME/Documents/AppImage/nvim.appimage" ]; then
+  alias nvim="$HOME/Documents/AppImage/nvim.appimage"
+fi
+if [ -f "$HOME/Documents/AppImage/Ghostty.AppImage" ]; then
+  alias ghost="$HOME/Documents/AppImage/Ghostty.AppImage"
+fi
