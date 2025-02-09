@@ -1,16 +1,34 @@
-background=282c34
-theme = dark:OneHalfDark,light:OneHalfLight
-foreground=ffffff
+quick-terminal-position="top"
+quick-terminal-screen="main"
+
+#background=282c34
+theme = OneHalfDark
+#theme = DjangoSmooth
+#foreground=ffffff
 
 font-size = 14
 cursor-style = block
 adjust-cell-height = 10%
-background-opacity = 0.96
+background-opacity = 0.80
 mouse-hide-while-typing = true
 
-gtk-titlebar-hide-when-maximized = true
+#gtk-titlebar-hide-when-maximized = true
 
-window-colorspace = "display-p3"
+
+adw-toolbar-style = flat
+window-decoration = false
+gtk-titlebar = false
+
+window-theme = ghostty
+
+#custom-shader = shaders/glitchy.glsl
+#custom-shader = shaders/in-game-crt.glsl
+custom-shader = shaders/inside-the-matrix.glsl
+#custom-shader = shaders/gears-and-belts.glsl
+#custom-shader = shaders/negative.glsl
+#custom-shader = shaders/starfield.glsl
+#custom-shader = shaders/starfield-colors.glsl
+#custom-shader = shaders/galaxy.glsl
 
 keybind = ctrl+r=reload_config
 keybind = ctrl+shift+w=close_surface
