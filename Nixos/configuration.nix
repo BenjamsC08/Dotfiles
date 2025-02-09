@@ -110,7 +110,7 @@
   users.extraGroups.vboxusers.members = [ "ben" ];
 
   # Install firefox.
-  programs.firefox.enable = false;
+  programs.firefox.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -122,7 +122,9 @@
   environment.systemPackages = with pkgs; [
     neovim wget brave keepassxc terminator zsh ghostty git stow gcc clang valgrind gdb
     gnumake wget curl zip unzip nodejs_23 gcolor3 linuxKernel.packages.linux_6_6.nvidia_x11
-    pciutils nvtopPackages.nvidia tree neofetch python311 python311Packages.pip luarocks xsel xclip
+    pciutils nvtopPackages.nvidia tree neofetch python311 python311Packages.pip luarocks xsel xclip xorg.libX11
+    ripgrep xorg.libXrandr xorg.libXext gnome.gvfs gnome-notes gnome-mines gnome-solanum
+    nautilus yarn
   ];
 
   system.stateVersion = "24.05"; # Did you read the comment?
