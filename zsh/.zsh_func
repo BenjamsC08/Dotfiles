@@ -1,0 +1,13 @@
+# .zsh_func
+
+cs (){
+  cd "$1" && clear && ls
+}
+
+function GL() {
+    if [[ $1 =~ ^[0-9]+$ ]]; then
+        git --no-pager log -$i --pretty=format:"%C(yellow)%h %C(reset)- %C(green)%s %C(reset) | %C(blue)%cd (%cr) %C(reset)" --date=format:'%Y-%m-%d %H:%M' --color=always
+    else
+        git --no-pager log -5 --pretty=format:"%C(yellow)%h %C(reset)- %C(green)%s %C(reset) | %C(blue)%cd (%cr) %C(reset)" --date=format:'%Y-%m-%d %H:%M' --color=always
+    fi
+}

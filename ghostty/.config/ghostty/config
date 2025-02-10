@@ -1,0 +1,76 @@
+#background=282c34
+theme = OneHalfDark
+#theme = DjangoSmooth
+#foreground=ffffff
+
+
+
+font-size = 14
+cursor-style = block
+adjust-cell-height = 10%
+background-opacity = 0.80
+mouse-hide-while-typing = true
+
+#quick-terminal-position="center"
+#quick-terminal-screen="main"
+
+window-padding-x = 3,0
+window-padding-y = 12
+
+
+window-width = 80
+window-height = 20
+window-save-state = "always"
+
+adw-toolbar-style = flat
+window-decoration = false
+gtk-titlebar = false
+
+window-theme = ghostty
+
+custom-shader-animation = true
+
+#custom-shader = shaders/glitchy.glsl
+#custom-shader = shaders/in-game-crt.glsl
+#custom-shader = shaders/inside-the-matrix.glsl
+#custom-shader = shaders/gears-and-belts.glsl
+#custom-shader = shaders/negative.glsl
+#custom-shader = shaders/starfield.glsl
+#custom-shader = shaders/starfield-colors.glsl
+#custom-shader = shaders/galaxy.glsl
+custom-shader = shaders/glow-rgbsplit-twitchy.glsl
+#custom-shader = shaders/gradient-background.glsl
+
+keybind = ctrl+r=reload_config
+keybind = ctrl+shift+w=close_surface
+
+# tabs
+keybind = ctrl+tab=next_tab
+keybind = ctrl+shift+tab=previous_tab
+keybind = ctrl+comma=move_tab:-1
+keybind = ctrl+period=move_tab:1
+
+# quick tab switch
+keybind = ctrl+1=goto_tab:1
+keybind = ctrl+2=goto_tab:2
+keybind = ctrl+3=goto_tab:3
+keybind = ctrl+4=goto_tab:4
+keybind = ctrl+5=goto_tab:5
+keybind = ctrl+6=goto_tab:6
+keybind = ctrl+7=goto_tab:7
+keybind = ctrl+8=goto_tab:8
+keybind = ctrl+9=goto_tab:9
+
+# split
+keybind = ctrl+shift+e=new_split:right
+keybind = ctrl+shift+o=new_split:down
+
+keybind = cmd+alt+s=goto_split:bottom
+keybind = ctrl+alt+w=goto_split:top
+keybind = ctrl+alt+a=goto_split:left
+keybind = ctrl+alt+d=goto_split:right
+
+
+keybind = ctrl+shift+z=toggle_split_zoom
+
+keybind = ctrl+alt+e=equalize_splits
