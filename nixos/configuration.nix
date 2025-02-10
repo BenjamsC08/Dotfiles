@@ -84,7 +84,8 @@
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
-      wike gnomeExtensions.rounded-corners
+      wike gnomeExtensions.rounded-corners gnomeExtensions.zen gnome-mines 
+      gnome-pomodoro gnome-mahjongg
     ];
   };
 
@@ -100,12 +101,14 @@
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   wget ghostty keepassxc stow git brave neovim zsh curl tree pciutils
   neofetch
-  clang gnumake gcc gdb valgrind
-  zip unzip ripgrep xclip xsel luarocks
-  nodejs_23 python311 python311Packages.pip yarn
-  gcolor3 nautilus gnome-notes gnome-mines gnome-solanum 
-  gnomeExtensions.dash-to-dock gnomeExtensions.caffeine
-  gnome-tweaks gnomeExtensions.appindicator
+  clang gnumake gcc gdb valgrind gnupg gimp
+  zip unzip ripgrep xclip xsel luarocks cronie
+  nodejs_23 python311 python311Packages.pip yarn docker_26
+  gcolor3 nautilus signal-desktop
+  gnomeExtensions.dash-to-dock gnomeExtensions.caffeine gnomecast
+  gnome-tweaks gnomeExtensions.appindicator gnome-keysign  gnome-calculator
+  gnome-nettool gnome-characters
+  ledger-live-desktop ledger
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
