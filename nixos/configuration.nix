@@ -85,7 +85,7 @@
     shell = pkgs.zsh;
     packages = with pkgs; [
       wike gnomeExtensions.rounded-corners gnomeExtensions.zen gnome-mines 
-      gnome-pomodoro gnome-mahjongg
+      gnome-pomodoro gnome-mahjongg krabby devilspie2
     ];
   };
 
