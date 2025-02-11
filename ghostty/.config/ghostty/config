@@ -1,6 +1,24 @@
 #background=282c34
-theme = OneHalfDark
+#theme = OneHalfDark
 #theme = DjangoSmooth
+#theme = Builtin Solarized Dark
+theme = CyberpunkScarletProtocol
+#theme = Elementary
+#theme = ENCOM
+#theme = Github Dark
+#theme = Github-Dark-High-Contrast
+#theme = Glacier #noir et rouge
+#theme = Homebrew #noir et vert
+#theme = idleToes
+#theme = Lab Fox #noir et orange
+#theme = LiquidCarbon
+#theme = Mariana
+#theme = Neon
+#theme = NightLion v1
+#theme = Nocturnal Winter
+#theme = Obsidian
+#theme = rose-pine-dawn
+#theme = Scarlet Protocol
 #foreground=ffffff
 
 
