@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# in /etc/fstab : UUID=123e4567-e89b-12d3-a456-426614174000  /mnt/Prog  ext4  defaults  0  2
+
+
 MOUNT_POINT="/mnt/Prog"
 GROUP="users"
 
