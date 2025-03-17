@@ -2,7 +2,7 @@
 #theme = OneHalfDark
 #theme = DjangoSmooth
 #theme = Builtin Solarized Dark
-theme = CyberpunkScarletProtocol
+#theme = CyberpunkScarletProtocol
 #theme = Elementary
 #theme = ENCOM
 #theme = Github Dark
@@ -19,11 +19,19 @@ theme = CyberpunkScarletProtocol
 #theme = Obsidian
 #theme = rose-pine-dawn
 #theme = Scarlet Protocol
+
+theme = NightLion V2
+#theme =  Nocturnal Winter 
+#theme = tokyonight 
+#theme = tokyonight-storm
+#theme = tokyonight_moon
+#theme = tokyonight_night
+
 #foreground=ffffff
 
 
 
-font-size = 14
+font-size = 12
 cursor-style = block
 adjust-cell-height = 10%
 background-opacity = 0.80
